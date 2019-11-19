@@ -13,15 +13,15 @@ const connection = mysql.createConnection({
 var myData =[];
 connection.connect();
 
-// function validate(bodyContent)
-// {
-//     const schema = {
-//         "Name": Joi.string().length(6).required(),
-//         "No": Joi.number().required(),
-//         "Address": Joi.required()
-//         };
-//    return Joi.validate(bodyContent , schema);
-// }
+/* function validate(bodyContent)
+ {
+     const schema = {
+         "Name": Joi.string().length(6).required(),
+         "No": Joi.number().required(),
+         "Address": Joi.required()
+         };
+    return Joi.validate(bodyContent , schema);
+ }*/
 
 emprouter.post("/",function(request, response){
 
@@ -117,6 +117,7 @@ emprouter.get("/", function(request, response){
     
 });
 
+//akshay chandure 
 emprouter.get("/:No", function(request, response){
     let eno = parseInt(request.params.No);
     let query = `select * from emp where no=${eno}`;
