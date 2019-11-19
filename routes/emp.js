@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
 var myData =[];
 connection.connect();
 
-/* function validate(bodyContent)
+ function validate(bodyContent)
  {
      const schema = {
          "Name": Joi.string().length(6).required(),
@@ -21,7 +21,7 @@ connection.connect();
          "Address": Joi.required()
          };
     return Joi.validate(bodyContent , schema);
- }*/
+ }
 
 emprouter.post("/",function(request, response){
 
